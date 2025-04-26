@@ -31,10 +31,8 @@ Describe 'Module Manifest Tests' -Tag "Test","Build" {
 }
 
 Describe 'Script Analysis' -Tag "Test" {
-    Context "<Name>" -ForEach $sourceFiles {
-        It "Passes ScriptAnalyzer" {
-            $checker = Invoke-ScriptAnalyzer -Path $Path
-            $checker | Should -BeNullOrEmpty
-        }
-    }
+	It "<Name>" -ForEach $sourceFiles {
+		$checker = Invoke-ScriptAnalyzer -Path $Path
+		$checker | Should -BeNullOrEmpty
+	}
 }
