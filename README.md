@@ -15,6 +15,10 @@ For those of you who are using either PAC CLI or Power Platform Build Tools to h
 - It _can_ handle custom connectors across environments, provided the custom connector was exported/imported via solution to the target environment (this retains the same root ID between environments)
   - I also add a general practice of setting the connection's display name to contain the solution name somewhere in it (so I know what uses it and what auth is associated with it), so this function looks for that in the target environment. If that is **not** the case, it will select the first match it finds (but will warn you).
 
+### Get-CustomConnectorDefinition
+
+This command simplifies the process of downloading the definition files for a custom connector from a selected environment. Pretty straightforward.
+
 ## Requirements
 
 - Power Platform CLI v. 1.34 or higher (https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction)
