@@ -19,8 +19,21 @@ For those of you who are using either PAC CLI or Power Platform Build Tools to h
 
 This command simplifies the process of downloading the definition files for a custom connector from a selected environment. Pretty straightforward.
 
+### Deploy-CustomConnector
+
+Quickly and easily deploy your custom connectors from your repositories. Has the option to push new ones or update existing ones, and to push them into a solution in the environment (fairly common practice to have a custom connector repository solution present).
+
+#### Notes and Limitations
+
+- Obviously, you cannot push a new custom connector into a managed solution. My usual method is to add the connector to the unmanaged version and export/import that into your target environment.
+
+
 ## Requirements
 
 - Power Platform CLI v. 1.34 or higher (https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction)
 - Microsoft.PowerApps.Administration.PowerShell module
 - Only compatible with PowerShell 5.1 due to current internal conflicts with .NET Core (https://learn.microsoft.com/en-us/power-platform/admin/powerapps-powershell#prerequisites)
+
+## Notice
+
+While I do actively use these commands in my own work, this is still very much a work in progress, and subject to potential changes in the Power Platform CLI.
